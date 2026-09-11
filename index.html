@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>BridgeAI</title>
+</head>
+<body>
+    <h1>BridgeAI</h1>
+    <p>Turning messy real-world information into clear, useful actions.</p>
+
+    <textarea id="input" rows="8" cols="60"
+        placeholder="Enter your situation here..."></textarea>
+
+    <br><br>
+
+    <button onclick="processInput()">Analyze with Gemini</button>
+
+    <h2>Structured Result</h2>
+    <div id="result">Your result will appear here.</div>
+
+    <script>
+        function processInput() {
+            const input = document.getElementById("input").value;
+
+            if (input.trim() === "") {
+                document.getElementById("result").innerText =
+                    "Please enter some information first.";
+                return;
+            }
+
+            document.getElementById("result").innerText =
+                "Your information has been received. Gemini analysis will be connected next.";
+        }
+    </script>
+</body>
+</html>
